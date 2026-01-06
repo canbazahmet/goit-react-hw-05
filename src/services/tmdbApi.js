@@ -27,7 +27,7 @@ export const fetchMovieCast = async (movieId) => {
   return resp.data.cast;
 };
 
-// https://api.themoviedb.org/3/movie/movie_id/reviews
+//https://api.themoviedb.org/3/movie/movie_id/reviews
 export const fetchMovieReviews = async (movieId) => {
   const resp = await axios.get(`${url}movie/${movieId}/reviews`, options);
   return resp.data.results;
