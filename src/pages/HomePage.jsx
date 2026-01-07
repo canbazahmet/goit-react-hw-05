@@ -24,7 +24,7 @@ export default function HomePage() {
   }, []);
   return (
     <div>
-      <h1>Trending today- TOP 20</h1>
+      <h1>Trending today</h1>
       {isLoading && <b>Loading movies...</b>}
       {error && <b>Whoops there was an error, plz reload the page...</b>}
       {movies.length > 0 && <MovieTopList movies={movies} />}

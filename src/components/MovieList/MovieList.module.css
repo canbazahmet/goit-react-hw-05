@@ -1,5 +1,5 @@
 .wrapper {
-  margin: 16px;
+  margin: 0;
 }
 
 .list {
@@ -24,7 +24,7 @@
 }
 
 .poster {
-  max-width: 450px;
+  max-width: 268px;
   margin: 0 auto 10px;
   aspect-ratio: 2 / 3;
 }
