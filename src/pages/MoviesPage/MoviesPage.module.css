@@ -1,0 +1,26 @@
+.searchbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchBoxField {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.searchBoxField:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.searchbox div {
+  margin-top: 10px;
+  text-align: center;
+}
