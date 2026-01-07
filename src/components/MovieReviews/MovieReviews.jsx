@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
-import { fetchMovieReviews } from "../services/tmdbApi";
+import { fetchMovieReviews } from "../../services/tmdbApi";
 
 import css from "./MovieReviews.module.css";
 
