@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router";
 
 import Navigation from "../Navigation/Navigation";
 
-import css from "./App.css";
+import "./App.css";
 
-const HomePages = lazy(() => import("../../pages/HomePage"));
+const HomePage = lazy(() => import("../../pages/HomePage"));
 const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage"));
 const NotFoundPage = lazy(() => import("../../pages/NotFoundPage"));
 const MovieDetailsPage = lazy(() =>
@@ -14,12 +14,12 @@ const MovieDetailsPage = lazy(() =>
 
 function App() {
   return (
-    <div className={css.container}>
+    <div className="container">
       <Navigation />
 
       <Suspense fallback={"Loading page..."}>
         <Routes>
-          <Route path="/" element={<HomePages />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}></Route>
           <Route path="*" element={<NotFoundPage />} />

@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { NavLink, useParams, Outlet, Link, useLocation } from "react-router";
-import { fetchMovieById } from "../services/tmdbApi";
-import MovieDetailInfo from "../../components/MovieDetailInfo/MovieDetailInfo";
+import { fetchMovieById } from "../../services/tmdbApi";
+import MovieDetails from "../../components/MovieDetails/MovieDetails";
 import clsx from "clsx";
 
 import css from "./MovieDetailsPage.module.css";
@@ -39,8 +39,8 @@ export default function MovieDetailsPage() {
       <Link to={backLinkRef.current}>Go back</Link>
 
       {isLoading && <b>Loading info...</b>}
-      {error && <b>Whoops there was an error, plz reload the page...</b>}
-      {movie && <MovieDetailInfo movie={movie} />}
+      {error && <b>Whoops there was an error, please reload the page...</b>}
+      {movie && <MovieDetails movie={movie} />}
 
       <ul className={css.list}>
         <p>Additional information</p>

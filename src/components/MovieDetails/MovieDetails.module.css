@@ -1,0 +1,28 @@
+.detailWrapper {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.poster {
+  max-width: 335px;
+  margin: 0 auto 10px;
+  aspect-ratio: 2 / 3;
+}
+
+.movieInfo {
+  display: flex;
+  gap: 16 px;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  padding: 10px;
+}
+
+.title {
+  color: #747bff;
+}
