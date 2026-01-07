@@ -11,13 +11,16 @@ export default function MovieDetailInfo({ movie }) {
         className={css.poster}
       />
       <div className={css.movieInfo}>
-        <h1 className={css.title}>{movie.title}</h1>
-        <p>Release date: {movie.release_date}</p>
+        <h2 className={css.title}>
+          {movie.title} ({movie.release_date.slice(0, 4)})
+        </h2>
+        <p className={css.parag}>Raiting: {movie.vote_average} / 10.0</p>
         <h3>Overview</h3>
-        <p>{movie.overview}</p>
-        <h3>Genres:</h3>
-        <p>{movie.genres.map((genre) => genre.name).join(", ")}</p>
-        <p>Raiting: {movie.vote_average} / 10.0</p>
+        <p className={css.parag}>{movie.overview}</p>
+        <h4>Genres:</h4>
+        <p className={css.parag}>
+          {movie.genres.map((genre) => genre.name).join(" ")}
+        </p>
       </div>
     </div>
   );

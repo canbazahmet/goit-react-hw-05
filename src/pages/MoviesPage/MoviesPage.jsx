@@ -17,15 +17,10 @@ export default function MoviesPage() {
 
   const [debouncedQuery] = useDebounce(query, 800);
 
-  const changeSearchQuery = (event) => {
-    const nextParams = new URLSearchParams(searchParams);
-    if (event.target.value !== "") {
-      nextParams.set("query", event.target.value);
-    } else {
-      nextParams.delete("query");
-    }
-
-    setSearchParams(nextParams);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const value = e.target.elements.query.value.trim();
+    setSearchParams({ query: value });
   };
 
   useEffect(() => {
@@ -53,14 +48,16 @@ export default function MoviesPage() {
   }, [debouncedQuery]);
 
   return (
-    <div className={css.searchbox}>
-      <input
-        className={css.searchBoxField}
-        type="text"
-        value={query}
-        onChange={changeSearchQuery}
-      />
-      <div>
+    <div className={css.searchBox}>
+      <form className={css.formBox} onSubmit={handleSubmit}>
+        <input
+          className={css.searchBoxField}
+          name="query"
+          defaultValue={query}
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div className={css.container}>
         {isLoading && <b>Loading movies...</b>}
         {error && <b>Whoops there was error, please reload page...</b>}
         {movies.length > 0 && <MovieList movies={movies} />}

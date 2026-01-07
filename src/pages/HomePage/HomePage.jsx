@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchTopMovies } from "../services/tmdbApi";
-import MovieTopList from "../components/MovieList/MovieList";
+import { fetchTopMovies } from "../../services/tmdbApi";
+import MovieTopList from "../../components/MovieList/MovieList";
+
+import css from "./HomePage.module.css";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -23,8 +25,8 @@ export default function HomePage() {
     getTopMovies();
   }, []);
   return (
-    <div>
-      <h1>Trending today</h1>
+    <div className={css.container}>
+      <h2>Trending today</h2>
       {isLoading && <b>Loading movies...</b>}
       {error && <b>Whoops there was an error, plz reload the page...</b>}
       {movies.length > 0 && <MovieTopList movies={movies} />}

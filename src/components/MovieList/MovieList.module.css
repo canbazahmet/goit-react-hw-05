@@ -1,30 +1,28 @@
 .wrapper {
-  margin: 0;
 }
 
 .list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 16px;
 }
 
 .listItems {
-  background-color: #f9f9f9;
-  padding: 8px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0;
+}
+
+.movieDiv {
+  padding: 0;
+  margin: 0;
 }
 
 .movieName {
-  text-decoration: none;
   font-weight: 600;
 }
 
 .poster {
-  max-width: 268px;
-  margin: 0 auto 10px;
+  max-width: 270px;
+  margin: 0;
   aspect-ratio: 2 / 3;
+}
+
+.title {
+  font-weight: 500;
 }

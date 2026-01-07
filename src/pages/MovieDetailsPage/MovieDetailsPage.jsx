@@ -35,8 +35,10 @@ export default function MovieDetailsPage() {
   }, [movieId]);
 
   return (
-    <div>
-      <Link to={backLinkRef.current}>Go back</Link>
+    <div className={css.movie}>
+      <Link className={css.goBack} to={backLinkRef.current}>
+        ← Go back
+      </Link>
 
       {isLoading && <b>Loading info...</b>}
       {error && <b>Whoops there was an error, please reload the page...</b>}
