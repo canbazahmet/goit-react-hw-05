@@ -46,12 +46,12 @@ export default function MovieDetailsPage() {
 
       <ul className={css.list}>
         <p>Additional information</p>
-        <li>
+        <li className={css.listItems}>
           <NavLink to="cast" className={getLinkStyles}>
             Cast
           </NavLink>
         </li>
-        <li>
+        <li className={css.listItems}>
           <NavLink to="reviews" className={getLinkStyles}>
             Reviews
           </NavLink>
